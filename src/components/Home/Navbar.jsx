@@ -6,6 +6,10 @@ import {Link} from "react-router-dom"
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
+  const scrollToArticles = () => {
+    const articlesElement = document.getElementById('articulos');
+    articlesElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <div className='flex justify-center items-center px-6 py-2 md:p-4 text-blue-800 text-lg font-semibold h-24'>
@@ -22,7 +26,7 @@ const Navbar = () => {
             <FaTimes color='#2C5697' size='30px' />
           </button>
           <ul className={`md:flex justify-around gap-6 font-sans ${isOpen ? 'block' : 'hidden'} md:block`}>
-            <li className='md:mb-0 mb-8'><Link to="/">Artículos</Link></li> 
+            <li className='md:mb-0 mb-8'><button onClick={() => scrollToArticles()}>Artículos</button></li> 
             <li className='md:mb-0 mb-8'><Link to="/">Posgrados</Link></li>
             <li className='md:mb-0 mb-8'><Link to="/">Expo - Javeriana</Link></li>
           </ul>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img1 from "../../assets/cards/01.jpg";
 import img2 from "../../assets/cards/02.jpg";
 import img3 from "../../assets/cards/03.jpg";
@@ -49,7 +50,7 @@ const Card = () => {
             className="w-full h-40 object-cover rounded-tl-2xl rounded-bl-2xl rounded-br-2xl"
           />
           <button className="bg-blue-600 text-white font-bold py-2 rounded-b-xl w-24 relative bottom-10">
-            Leer más
+          <Link to="/article">Leer más</Link>
           </button>
           <div className="flex justify-between items-center px-4 pb-6">
             <div>

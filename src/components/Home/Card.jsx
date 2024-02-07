@@ -2,6 +2,7 @@ import img1 from "../../assets/cards/01.jpg";
 import img2 from "../../assets/cards/02.jpg";
 import img3 from "../../assets/cards/03.jpg";
 import img4 from "../../assets/cards/04.jpg";
+import { FiChevronUp } from "react-icons/fi";
 
 const Card = () => {
   const cards = [
@@ -29,22 +30,14 @@ const Card = () => {
     {
       img: img4,
     },
-    {
-      img: img1,
-    },
-    {
-      img: img2,
-    },
-    {
-      img: img3,
-    },
-    {
-      img: img4,
-    },
   ];
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-40 pt-12 ">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-40 pt-12 ">
       {cards.map((card, index) => (
         <div
           key={index}
@@ -70,6 +63,11 @@ const Card = () => {
               </p>
             </div>
           </div>
+
+          {/* Aquí agregamos el nuevo botón naranja con la flecha */}
+          <button className="text-white font-bold py-2 rounded-full bg-orange-500 w-12 h-12 flex items-center justify-center absolute right-[48%] bottom-[-120px] " onClick={handleClick}>
+            <FiChevronUp size="20px" />
+          </button>
         </div>
       ))}
     </div>

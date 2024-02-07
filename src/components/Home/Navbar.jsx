@@ -16,8 +16,8 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className='order-3 md:order-1 w-full md:w-auto flex flex-col items-center md:flex-row'>
-      <nav className={`fixed top-0 right-0 h-full  bg-white z-10 flex flex-col items-center justify-center gap-6 font-sans ${isOpen ? 'block' : 'hidden'} md:relative md:bg-transparent md:flex-row md:justify-around md:gap-6 md:block`}>
+      <div className='w-full md:w-auto flex flex-col items-center md:flex-row'>
+      <nav className={`fixed w-3/4 top-0 left-0 h-full  bg-white z-10 flex flex-col items-center justify-center gap-6 font-sans ${isOpen ? 'block' : 'hidden'} md:relative md:bg-transparent md:flex-row md:justify-around md:gap-6 md:block md:mx-20 `}>
           <button className={`absolute top-10 right-10 ${isOpen ? 'block' : 'hidden'}`} onClick={() => setIsOpen(false)}>
             <FaTimes color='#2C5697' size='30px' />
           </button>

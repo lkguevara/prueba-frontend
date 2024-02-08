@@ -1,0 +1,20 @@
+.background{
+    background-image: url('../../assets/posgrados/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img{
+    position: absolute;
+    right: 45%;
+    top: 40%;
+}
+
+.title{
+    color: #164980
+}
+
+.subtitle{
+    color: #246EAC 
+}

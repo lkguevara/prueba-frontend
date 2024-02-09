@@ -9,8 +9,10 @@ import {
   InputLabel,
   Select,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
     nombres: "",
     apellidos: "",
@@ -36,12 +38,12 @@ function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aquí manejarías la lógica de envío de datos del formulario
-    console.log(formValues);
+    navigate('/inscripcion')
+
   };
 
   return (
-    <div className="bg-sky-600  md:w-2/3 p-6 rounded-3xl mt-72 mx-4">
+    <div className="bg-sky-600  md:w-2/3 p-6 rounded-3xl md:mt-72 mx-4">
       <form className="" onSubmit={handleSubmit}>
         <h1 className="text-xl text-white">Confirma tu asistencia aquí</h1>
         <TextField
@@ -211,14 +213,14 @@ function Form() {
           }
           label="Acepto términos y condiciones."
         />
-      </form>
       <Button
         type="submit"
         variant="contained"
-        sx={{ backgroundColor: "yellow", color: "black" }}
+        sx={{ backgroundColor: "blue", color: "white" }}
       >
         Enviar
       </Button>
+      </form>
     </div>
   );
 }

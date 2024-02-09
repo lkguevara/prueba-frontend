@@ -7,6 +7,7 @@ const Articles = () => {
         <div className="border-top"/>
         <h1 className="text-gray-500 font-medium text-center text-3xl ">Entérate de los últimos artículos de <br /> nuestra universidad</h1>
         <Card />
+        <Card />
     </div>
   )
 }

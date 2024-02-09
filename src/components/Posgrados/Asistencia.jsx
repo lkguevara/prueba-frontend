@@ -5,7 +5,7 @@ import Form from "./Form";
 const Asistencia = () => {
   return (
     <div className="background py-12 md:flex">
-      <img src={image} alt="imagen" className="w-96 img" />
+      <img src={image} alt="imagen" className="img" />
       {/* Titulo principal */}
       <div className="md:w-1/2 text-center pt-12">
         <h1 className="title font-black text-7xl">E X P O</h1>

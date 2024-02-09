@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../assets/logo-nav.png";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setActive(getActiveButton(location.pathname));
+  }, [location]);
 
   const scrollToArticles = () => {
     const articlesElement = document.getElementById("articulos");
@@ -17,6 +22,12 @@ const Navbar = () => {
     if (button === "Artículos") {
       scrollToArticles();
     }
+  };
+
+  const getActiveButton = (pathname) => {
+    if (pathname === "/") return "Artículos";
+    else if (pathname === "/posgrados") return "Posgrados";
+    return "";
   };
 
   return (
@@ -62,15 +73,6 @@ const Navbar = () => {
             >
               <Link onClick={handleActiveButton("Posgrados")} to="/posgrados">
                 Posgrados
-              </Link>
-            </li>
-            <li
-              className={`md:mb-0 mb-8 p-2 rounded-xl  ${
-                active === "Expo - Javeriana" ? "bg-blue-500 text-white" : ""
-              }`}
-            >
-              <Link onClick={handleActiveButton("Expo - Javeriana")} to="/">
-                Expo - Javeriana
               </Link>
             </li>
           </ul>

@@ -5,10 +5,28 @@
     background-position: center;
 }
 
+.background-egresados{
+    background-image: url('../../assets/posgrados/bg-egresados.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .img{
-    position: absolute;
-    right: 45%;
-    top: 40%;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) { 
+    .img{
+        position: absolute;
+        right: 35%;
+        top: 40%;
+        width: 30%;
+        height: auto;
+    }
+    
 }
 
 .title{
